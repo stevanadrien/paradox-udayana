@@ -1,50 +1,87 @@
+html,
+body {
+  margin: 0px;
+  font-family: "Quicksand", sans-serif;
+  background-color: #f5f5f5;
+}
+@media only screen and (max-width: 600px) {
+  .slogan {
+    font-size: 50px;
+  }
+  .home-image {
+    width: 100px;
+    height: 100px;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .slogan {
+    font-size: 100px;
+  }
+  .home-image {
+    width: 200px;
+    height: 200px;
+  }
+}
+
 .home {
-  background-color: chocolate;
   height: 100rem;
   width: 100%;
   display: flex;
   flex-direction: column;
 }
-.home-top {
-  height: 500px;
-  width: 100%;
-  background-color: red;
+.top-container {
+  margin-top: 10%;
   display: flex;
+  align-items: center;
+  justify-content: center;
   flex-direction: row;
+  gap: 50px;
+  text-align: center;
+}
+.home-top {
+  padding-bottom: 370px;
+  width: 100%;
+  background-image: url(brown.jpg);
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 70px;
+  text-align: center;
 }
 .home-right {
-  width: 65%;
+  height: 100%;
   float: right;
   display: flex;
-  text-align: flex-end;
-  background-color: green;
+  background-color: rgba(0, 128, 0, 0);
 }
 .limitless-slogan {
   font-size: 100px;
-  text-align: end;
-  margin-left: 20%;
-  margin-right: 5%;
-  display: flex;
 }
 .home-left {
-  width: 35%;
+  height: 100%;
   float: left;
-  background-color: rgb(21, 255, 0);
+  background-color: rgba(21, 255, 0, 0);
   align-items: center;
   display: flex;
   justify-content: center;
 }
-.home-image {
-  width: 200px;
-  display: flex;
-}
 .home-mid {
-  height: 20rem;
-  background-color: aquamarine;
+  padding-top: 5rem;
+  padding-bottom: 10rem;
+  background-color: rgba(127, 255, 212, 0);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-shrink: 3;
 }
 .home-bottom {
-  height: 20rem;
-  background-color: bisque;
+  display: flex;
+  padding-bottom: 5rem;
+  justify-content: center;
 }
 .quotes-container {
   display: flex;
@@ -52,7 +89,19 @@
   text-align: center;
   gap: 0;
   margin: 0;
+  flex-shrink: 3;
 }
 .quotes-text {
   font-size: 30px;
+  flex-shrink: 3;
+}
+.who-text {
+  margin-right: 10rem;
+  margin-left: 10rem;
+}
+.slogan {
+  font-family: "Open Sans", sans-serif;
+  color: rgb(255, 255, 255);
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgb(0, 0, 0);
 }
