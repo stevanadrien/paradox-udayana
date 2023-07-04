@@ -39,11 +39,18 @@
     color: var(--nav);
   }
   
+  .navbar-nav ul li {
+    display: block;
+    text-decoration: none;
+    display: inline-block;
+  }
+
   .navbar .navbar-nav a {
     color: #fff;
     display: inline-block;
     font-size: 1.3rem;
     margin: 0 1rem;
+
   }
   
   .navbar .navbar-nav a:hover {
@@ -73,6 +80,7 @@
     height: 20px;
     justify-content: space-between;
     position: relative;
+    z-index: 2;
 }
 
 .menu-toggle input {
@@ -130,7 +138,8 @@
   .menu-toggle{
     display: flex;
   }
-  nav ul {
+  ul {
+      display: flex;
       position: absolute;
       right: 0;
       top: 0;
@@ -138,16 +147,18 @@
       height: 100vh;
       justify-content: space-evenly;
       flex-direction: column;
-      align-items: center; 
-      background-color: rgb(105, 47, 158);
-      z-index: -1;
+      align-items: center;
+      display: row; 
+      background-color: rgba(1, 1, 1, 0.8);
+      z-index: 1;
       transform: translateX(100%);
       transition: all 1s;
       opacity: 0;
   }
-  nav ul.slide {
+   ul.slide {
       opacity: 1;
       transform: translateX(0);
+      
   }
   
 }
