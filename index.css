@@ -12,6 +12,10 @@ body {
     width: 100px;
     height: 100px;
   }
+  .card {
+    padding-right: 0px;
+    padding-left: 0px;
+  }
 }
 @media only screen and (min-width: 600px) {
   .slogan {
@@ -20,6 +24,10 @@ body {
   .home-image {
     width: 200px;
     height: 200px;
+  }
+  .card {
+    padding-right: 3rem;
+    padding-left: 3rem;
   }
 }
 
@@ -41,6 +49,7 @@ body {
 .home-top {
   padding-bottom: 370px;
   width: 100%;
+  margin-top: 40px;
   background-image: url(brown.jpg);
   background-size: cover;
   display: block;
@@ -95,11 +104,15 @@ body {
   font-size: 30px;
   flex-shrink: 3;
 }
+.who-title {
+  margin-bottom: 20px;
+}
 .who-text {
   margin-right: 10rem;
   margin-left: 10rem;
 }
 .slogan {
+  margin-top: 40px;
   font-family: "Open Sans", sans-serif;
   color: rgb(255, 255, 255);
   -webkit-text-stroke-width: 1px;
@@ -126,7 +139,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1.4rem 7%;
-  background-color: rgba(1, 1, 1, 0.8);
+  background-color: rgb(1, 1, 1);
   border-bottom: 1px solid #513c28;
   position: fixed;
   top: 0;
