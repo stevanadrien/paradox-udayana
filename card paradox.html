@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="card paradox.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap');    
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div id="container">
+        <a href="">
+            <div id="card1" class="card">
+                <div id="outterCircle1" class="outterCircle">
+                    <div id="innerCircle1" class="innerCircle">
+                        <i class="fa-solid fa-image fa-3x" style="color: #ffffff;"></i>
+                    </div>
+                </div>
+                <h1>Title</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat velit maiores reiciendis maxime ut architecto porro labore tempora aspernatur pariatur.</p>
+            </div>
+        </a>
+
+        <a href="">
+            <div id="card2" class="card">
+                <div id="outterCircle2" class="outterCircle">
+                    <div id="innerCircle2" class="innerCircle">
+                        <i class="fa-solid fa-image fa-3x" style="color: #ffffff;"></i>
+                    </div>
+                </div>
+                <h1>Title</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat velit maiores reiciendis maxime ut architecto porro labore tempora aspernatur pariatur.</p>
+            </div>
+        </a>
+
+        <a href="">
+            <div id="card3" class="card">
+                <div id="outterCircle3" class="outterCircle">
+                    <div id="innerCircle3" class="innerCircle">
+                        <i class="fa-solid fa-image fa-3x" style="color: #ffffff;"></i>
+                    </div>
+                </div>
+                <h1>Title</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat velit maiores reiciendis maxime ut architecto porro labore tempora aspernatur pariatur.</p>
+            </div>
+        </a>
+
+        <a href="">
+            <div id="card4" class="card">
+                <div id="outterCircle4" class="outterCircle">
+                    <div id="innerCircle4" class="innerCircle">
+                        <i class="fa-solid fa-image fa-3x" style="color: #ffffff;"></i>
+                    </div>
+                </div>
+                <h1>Title</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat velit maiores reiciendis maxime ut architecto porro labore tempora aspernatur pariatur.</p>
+            </div>
+        </a>
+
+        <a href="">
+            <div id="card5" class="card">
+                <div id="outterCircle5" class="outterCircle">
+                    <div id="innerCircle5" class="innerCircle">
+                        <i class="fa-solid fa-image fa-3x" style="color: #ffffff;"></i>
+                    </div>
+                </div>
+                <h1>Title</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat velit maiores reiciendis maxime ut architecto porro labore tempora aspernatur pariatur.</p>
+            </div>
+        </a>
+
+        <a href="">
+            <div id="card6" class="card">
+                <div id="outterCircle6" class="outterCircle">
+                    <div id="innerCircle6" class="innerCircle">
+                        <i class="fa-solid fa-image fa-3x" style="color: #ffffff;"></i>
+                    </div>
+                </div>
+                <h1>Title</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat velit maiores reiciendis maxime ut architecto porro labore tempora aspernatur pariatur.</p>
+            </div>
+        </a>
+    </div>
+
+    <script>
+        card = document.getElementsByClassName('card');
+        icon = document.getElementsByTagName('i');
+
+        function mouseIn(i){
+            card[i].addEventListener('mouseenter', function(){
+                icon[i].removeAttribute('class');
+                icon[i].setAttribute('class', 'fa-solid fa-image fa-3x fa-bounce');
+                // alert('test');
+            });
+        }
+
+        function mouseOut(i){
+            card[i].addEventListener('mouseleave', function(){
+                icon[i].removeAttribute('class');
+                icon[i].setAttribute('class', 'fa-solid fa-image fa-3x');
+                // alert('test');
+            });
+        }
+        
+        for(i = 0; i < card.length; i++){
+            mouseIn(i);
+            
+            mouseOut(i);
+        }
+    </script>
+</body>
+</html>
