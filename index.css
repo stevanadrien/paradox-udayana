@@ -247,12 +247,10 @@ body {
 @media (max-width: 1024px) {
 }
 @media (max-width: 768px) {
-}
-@media (max-width: 576px) {
   .menu-toggle {
     display: flex;
   }
-  ul {
+  .nav-ul {
     display: flex;
     position: absolute;
     right: 0;
@@ -273,6 +271,8 @@ body {
     opacity: 1;
     transform: translateX(0);
   }
+}
+@media (max-width: 660px) {
 }
 
 .p {

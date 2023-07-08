@@ -37,6 +37,7 @@
 
 .text-body {
   color: rgb(0, 0, 0);
+  font-size: 17px;
 }
 
 /*Text*/
@@ -48,6 +49,8 @@
 /*Hover*/
 .card:hover {
   border-color: #dfd7bf;
+  background-color: #f2ead3;
+  color: #3f2305;
   box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
 }
 

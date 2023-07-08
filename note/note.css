@@ -30,8 +30,8 @@ body {
 .wrapper li {
   height: 250px;
   list-style: none;
-  border-radius: 5px;
-  padding: 15px 20px 20px;
+  border-radius: 70px;
+  padding: 35px 40px 40px;
   background: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
 }
@@ -49,6 +49,7 @@ header,
   cursor: pointer;
   flex-direction: column;
   justify-content: center;
+  border-radius: 1px solid blue;
 }
 .add-box .icon {
   height: 78px;
@@ -160,11 +161,13 @@ header,
   z-index: 2;
   height: 100%;
   width: 100%;
+
   background: rgba(0, 0, 0, 0.4);
 }
 .popup-box .popup {
   position: absolute;
   top: 50%;
+
   left: 50%;
   z-index: 3;
   width: 100%;
