@@ -6,14 +6,10 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
-.notes-body {
-  background: #3f2305;
-}
 .notes-container {
   margin-top: 130px;
 }
 body {
-  background: #3f2305;
   height: 100rem;
 }
 ::selection {
@@ -32,7 +28,7 @@ body {
   list-style: none;
   border-radius: 70px;
   padding: 35px 40px 40px;
-  background: #fff;
+  background: #ffffff00;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
 }
 .add-box,
