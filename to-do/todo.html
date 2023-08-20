@@ -15,52 +15,45 @@
     <link rel="stylesheet" href="/index.css" />
     <script src="https://unpkg.com/feather-icons"></script>
     <script src="https://kit.fontawesome.com/addf194501.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-  <!-- Navbar start -->
-  <nav class="navbar">
-    <div class="navbar-logo">
-      <h4>Limitless</h4>
-    </div>
-    <div class="navbar-nav">
-      <ul class="nav-ul">
-        <li><a href="/index.html">HOME</a></li>
-        <li><a href="/to-do/todo.html">TODO LIST</a></li>
-        <li><a href="/calendar/calendar.html">CALENDAR</a></li>
-        <li><a href="/note/note.html">NOTE</a></li>
-      </ul>
-    </div>
-
-    <div class="menu-toggle">
-      <input type="checkbox" />
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-  </nav>
-  <!-- Navbar ENDS -->
-
-      <div class="menu-toggle">
-        <input type="checkbox" />
-        <span></span>
-        <span></span>
-        <span></span>
+    <!-- Navbar start -->
+    <div class="flex text-center w-full bg-amber-50/30">
+      <div class="flex w-1/3 h-20 justify-start items-center mx-1">
+        <img src="/src/img/limitless-logo.png" alt="" class="w-24 h-12" />
       </div>
-    </nav>
-    <!-- Navbar ENDS -->
-    <header>
-      <h1>To do List</h1>
-    </header>
-    <form>
-      <input type="text" class="todo-inputs" />
-      <button class="todo-button">
-        <i class="fas fa-plus-square"></i>
-      </button>
-    </form>
-    <div class="todo-container">
-      <ul class="todo-list"></ul>
+      <div class="flex w-2/3 justify-around text-center items-center font-semibold">
+        <div class="flex">
+          <a href="/public/index.html" class="">Home</a>
+        </div>
+        <div class="flex">
+          <a href="/to-do/todo.html" class="">To-Do</a>
+        </div>
+        <div class="flex">
+          <a href="/blog/blog.html" class="">Blog</a>
+        </div>
+        <div class="flex">
+          <a href="/note/note.html" class="">Note</a>
+        </div>
+        <div class="flex border-2 border-amber-800 rounded-3xl p-2 text-[13px] mx-3 bg-white">
+          <button>Register / Login</button>
+        </div>
+      </div>
     </div>
-    <script src="todo.js"></script>
-    <script src="/index.js"></script>
+    <!-- Navbar ENDS -->
+    <div class="container-todo-all">
+      <form>
+        <input type="text" class="todo-inputs" />
+        <button class="todo-button">
+          <p>ADD TASK</p>
+        </button>
+      </form>
+      <div class="todo-container">
+        <ul class="todo-list"></ul>
+      </div>
+      <script src="todo.js"></script>
+      <script src="/index.js"></script>
+    </div>
   </body>
 </html>

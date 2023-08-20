@@ -6,29 +6,36 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
-.notes-container {
-  margin-top: 130px;
+.note-container {
+  display: flex;
+  flex-direction: column;
 }
-body {
-  height: 100rem;
+#pen-icon {
+  font-size: 40px;
 }
 ::selection {
   color: #fff;
   background: #3f2305;
 }
 .wrapper {
-  margin-top: 200px;
   margin: 50px;
   display: grid;
   gap: 25px;
   grid-template-columns: repeat(auto-fill, 265px);
 }
-.wrapper li {
+.add-box {
   height: 250px;
   list-style: none;
   border-radius: 70px;
   padding: 35px 40px 40px;
-  background: #ffffff00;
+  background-color: #ee202000;
+}
+.note {
+  height: 250px;
+  list-style: none;
+  border-radius: 70px;
+  padding: 35px 40px 40px;
+  background: #fcf7ea;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
 }
 .add-box,

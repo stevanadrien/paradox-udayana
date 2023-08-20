@@ -31,7 +31,7 @@ function showNotes() {
   document.querySelectorAll(".note").forEach((li) => li.remove());
   notes.forEach((note, id) => {
     let filterDesc = note.description.replaceAll("\n", "<br/>");
-    let liTag = `<li class="note">
+    let liTag = `<div class="note">
                         <div class="details">
                             <p>${note.title}</p>
                             <span>${filterDesc}</span>
@@ -41,12 +41,11 @@ function showNotes() {
                             <div class="settings">
                                 <i onclick="showMenu(this)" class="uil uil-ellipsis-h"></i>
                                 <ul class="menu">
-                                    <li onclick="updateNote(${id}, '${note.title}', '${filterDesc}')"><i class="uil uil-pen"></i>Edit</li>
                                     <li onclick="deleteNote(${id})"><i class="uil uil-trash"></i>Delete</li>
                                 </ul>
                             </div>
                         </div>
-                    </li>`;
+                    </div>`;
     addBox.insertAdjacentHTML("afterend", liTag);
   });
 }
@@ -62,22 +61,11 @@ function showMenu(elem) {
 }
 
 function deleteNote(noteId) {
-  let confirmDel = confirm("Are you sure you want to delete this note?");
+  let confirmDel = confirm("Do you really want to delete this note?");
   if (!confirmDel) return;
   notes.splice(noteId, 1);
   localStorage.setItem("notes", JSON.stringify(notes));
   showNotes();
-}
-
-function updateNote(noteId, title, filterDesc) {
-  let description = filterDesc.replaceAll("<br/>", "\r\n");
-  updateId = noteId;
-  isUpdate = true;
-  addBox.click();
-  titleTag.value = title;
-  descTag.value = description;
-  popupTitle.innerText = "Update a Note";
-  addBtn.innerText = "Update Note";
 }
 
 addBtn.addEventListener("click", (e) => {

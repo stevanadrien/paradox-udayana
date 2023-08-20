@@ -9,27 +9,26 @@ todoButton.addEventListener("click", addTodos);
 todoList.addEventListener("click", deleteCheck);
 filterOption.addEventListener("click", filterTodo);
 
-function addTodos(e) {
-  e.preventDefault();
+function addTodos(x) {
+  x.preventDefault();
 
   //tododiv
   const todoDiv = document.createElement("div");
   todoDiv.classList.add("todo");
-
+  //checked button
+  const compleatedButton = document.createElement("button");
+  compleatedButton.innerHTML = '<i class="fa-regular fa-plus"></i>';
+  compleatedButton.classList.add("complete-btn");
+  todoDiv.appendChild(compleatedButton);
   //new todo
   const newTodo = document.createElement("li");
   newTodo.classList.add("todo-item");
   newTodo.innerText = todoInputs.value;
   todoDiv.appendChild(newTodo);
 
-  //checked button
-  const compleatedButton = document.createElement("button");
-  compleatedButton.innerHTML = '<i class="fas fa-check"><i>';
-  compleatedButton.classList.add("complete-btn");
-  todoDiv.appendChild(compleatedButton);
   //trash button
   const trashButton = document.createElement("button");
-  trashButton.innerHTML = '<i class="fas fa-trash"><i>';
+  trashButton.innerHTML = '<i class="fa-solid fa-minus" style="color: white;"></i>';
   trashButton.classList.add("trash-btn");
   todoDiv.appendChild(trashButton);
 
@@ -45,7 +44,7 @@ function deleteCheck(e) {
     const todo = items.parentElement;
 
     //todo animation
-    todo.classList.add("fall");
+    todo.classList.add("remove");
     todo.addEventListener("transitionend", function () {
       todo.remove();
     });
@@ -60,6 +59,7 @@ function deleteCheck(e) {
 
 function filterTodo(e) {
   const todos = todoList.childNodes;
+  todoList.appendChild(todoDiv);
   todos.forEach(function (todo) {
     switch (e.target.value) {
       case "all":
@@ -82,32 +82,4 @@ function filterTodo(e) {
     }
   });
 }
-function getTodos() {
-  //check
-  let todos = [];
-
-  todos.forEach(function (todo) {
-    //todoDiv
-    const todoDiv = document.createElement("div");
-    todoDiv.classList.add("todo");
-
-    //create li
-    const newTodo = document.createElement("li");
-    newTodo.classList.add("todo-item");
-    newTodo.innerText = todo;
-    todoDiv.appendChild(newTodo);
-
-    //checked button
-    const compleatedButton = document.createElement("button");
-    compleatedButton.innerHTML = '<i class="fas fa-check"><i>';
-    compleatedButton.classList.add("complete-btn");
-    todoDiv.appendChild(compleatedButton);
-    //trash button
-    const trashButton = document.createElement("button");
-    trashButton.innerHTML = '<i class="fas fa-trash"><i>';
-    trashButton.classList.add("trash-btn");
-    todoDiv.appendChild(trashButton);
-    //append list
-    todoList.appendChild(todoDiv);
-  });
-}
+function getTodos() {}
